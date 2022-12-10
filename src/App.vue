@@ -13,7 +13,7 @@ export default {
   components: {
     HelloWorld
   }
-  //테스트 커밋
+  //테스트 커밋2
 }
 </script>
 
