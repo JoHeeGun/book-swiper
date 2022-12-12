@@ -12,8 +12,7 @@ export default {
   name: 'App',
   components: {
     HelloWorld
-  }
-  //테스트 커밋2
+  }  
 }
 </script>
 
