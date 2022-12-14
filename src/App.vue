@@ -1,28 +1,45 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>    
+    book serach   
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import axios from 'axios';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }  
+  mounted() {
+    this.searchBook();
+  },
+  methods:{
+    async searchBook() {
+      try {
+        let sort = '';
+        let target = '';
+        let title = '';            
+
+        let api = await axios.get(
+          `https://dapi.kakao.com/v3/search/book?sort=${sort}&target=${target}&page=1`,
+          {
+            headers: {
+              Authorization: 'KakaoAK 3b9b7e5018ae18db72532378d670854e',
+            },
+            params: {
+              query: title,
+            },
+          },
+        );
+
+        console.log('api',api)
+
+      } catch (err) {
+        console.log(err);
+      }
+      
+    }
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

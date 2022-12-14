@@ -9,7 +9,7 @@ import axios from 'axios';
 
 export default {
   mounted() {
-    this.searchBook()
+    this.searchBook();
   },
   methods:{
     async searchBook() {
