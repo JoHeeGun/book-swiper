@@ -14,9 +14,9 @@ export default {
   methods:{
     async searchBook() {
       try {
-        let sort = '';
-        let target = '';
-        let title = '';            
+        let sort = 'accuracy';
+        let target = 'title';
+        let title = 'lion';            
 
         let api = await axios.get(
           `https://dapi.kakao.com/v3/search/book?sort=${sort}&target=${target}&page=1`,
