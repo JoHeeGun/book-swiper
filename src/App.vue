@@ -1,6 +1,7 @@
 <template>
   <div>    
-    book serach   
+    book serach data <br> 
+    {{item.documents}} 
   </div>
 </template>
 
@@ -8,6 +9,12 @@
 import axios from 'axios';
 
 export default {
+  data() {
+    return{
+      item:[],
+    }
+  },
+  
   mounted() {
     this.searchBook();
   },
@@ -30,7 +37,9 @@ export default {
           },
         );
 
-        console.log('api',api)
+        console.log('api',api);
+
+        this.item = api.data;
 
       } catch (err) {
         console.log(err);
