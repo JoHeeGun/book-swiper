@@ -1,7 +1,17 @@
 <template>
-  <div>    
-    book serach data <br> 
-    {{item.documents}} 
+  <div>            
+    <div>book data v-for</div>
+    <div 
+      v-for="(i,index) in item.documents" :key="index"
+    >
+      <div>
+      {{i}}
+      </div>
+      <div>
+        -------------------------------------
+      </div>
+    </div>
+
   </div>
 </template>
 
