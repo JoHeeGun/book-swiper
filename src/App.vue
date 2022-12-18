@@ -5,7 +5,10 @@
       v-for="(i,index) in item.documents" :key="index"
     >
       <div>
-      {{i}}
+      authors : {{i.authors}} <br>      
+      datetime : {{i.datetime}} <br>
+      price :  {{i.price}} <br>
+      title : {{i.title}}
       </div>
       <div>
         -------------------------------------
